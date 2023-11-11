@@ -15,7 +15,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
   String _emailErrorText = '';
   String _ageErrorText = '';
 
-   bool isNumeric(String value) {
+  bool isNumeric(String value) {
     if (value == null) {
       return false;
     }
@@ -37,12 +37,6 @@ class _RegistrationPageState extends State<RegistrationPage> {
               controller: _emailController,
               decoration: InputDecoration(
                 labelText: 'Email',
-                enabledBorder: UnderlineInputBorder(
-      borderSide: BorderSide(color: Colors.grey),
-    ),
-    focusedBorder: UnderlineInputBorder(
-      borderSide: BorderSide(color: Colors.blue),
-    ),
                 errorText: _emailErrorText,
               ),
               onChanged: (value) {
@@ -93,7 +87,8 @@ class _RegistrationPageState extends State<RegistrationPage> {
                 String age = _ageController.text;
 
                 // Perform registration validation and user creation
-                print('Email: $email, Password: $password, Confirm Password: $confirmPassword, Name: $name, Age: $age');
+                print(
+                    'Email: $email, Password: $password, Confirm Password: $confirmPassword, Name: $name, Age: $age');
               },
               child: Text('Register'),
             ),
