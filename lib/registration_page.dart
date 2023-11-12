@@ -33,11 +33,27 @@ class _RegistrationPageState extends State<RegistrationPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+             
             TextField(
               controller: _emailController,
               decoration: InputDecoration(
                 labelText: 'Email',
                 errorText: _emailErrorText,
+              focusedBorder: const UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.grey),
+              ),
+              enabledBorder: const UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.grey),
+              ),
+              errorBorder: const UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.grey),
+              ),
+              focusedErrorBorder: const UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.blue),
+              ),
+              hintStyle: TextStyle(color: Colors.blue),
+            
+              errorStyle: TextStyle(color: Colors.blue),
               ),
               onChanged: (value) {
                 setState(() {
@@ -69,6 +85,21 @@ class _RegistrationPageState extends State<RegistrationPage> {
               decoration: InputDecoration(
                 labelText: 'Age',
                 errorText: _ageErrorText,
+                focusedBorder: const UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.grey),
+              ),
+              enabledBorder: const UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.grey),
+              ),
+              errorBorder: const UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.grey),
+              ),
+              focusedErrorBorder: const UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.blue),
+              ),
+              hintStyle: TextStyle(color: Colors.blue),
+            
+              errorStyle: TextStyle(color: Colors.blue),
               ),
               onChanged: (value) {
                 setState(() {

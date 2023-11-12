@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'registration_page.dart';
+import 'navbar.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -40,6 +41,10 @@ class _LoginPageState extends State<LoginPage> {
                 String password = _passwordController.text;
                 // Perform login validation and authentication
                 print('Email: $email, Password: $password');
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => Navbar()),
+                );
               },
               child: Text('Login'),
             ),
